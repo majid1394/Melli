@@ -36,6 +36,7 @@ namespace WebApplication1.Controllers
             UserManager = userManager;
             AccessTokenFormat = accessTokenFormat;
             //commit test
+            //commit test again
         }
 
         public ApplicationUserManager UserManager
