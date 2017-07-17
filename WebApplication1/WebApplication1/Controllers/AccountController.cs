@@ -28,6 +28,7 @@ namespace WebApplication1.Controllers
 
         public AccountController()
         {
+            //tejst
         }
 
         public AccountController(ApplicationUserManager userManager,
