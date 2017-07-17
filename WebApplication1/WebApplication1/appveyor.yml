@@ -1,13 +1,19 @@
 version: 1.0.{build}
+nuget:
+  project_feed: true
 before_build:
 - cmd: 
 build:
   publish_wap: true
+  publish_nuget: true
   verbosity: minimal
-before_package:
-- cmd:
 deploy:
-- provider: Environment
-  name: MyEnvironment2
+- provider: WebDeploy
+  server: https://xptehran.scm.azurewebsites.net:443/msdeploy.axd
+  website: XPTehran /CD4
+  username: $XPTehran
+  password:
+    secure: 5MCIbFEfeAe+i/Mu6BuE9OOo6e1Q2pWN7R5T+kglXB5RXiv9XzW40njqbZc2mtOvzKHyZgmc+yhTU+G2ieVrXg==
+  artifact: WebApplication1.zip
   on:
     branch: master 
