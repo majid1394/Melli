@@ -6,8 +6,8 @@ build:
   verbosity: minimal
 before_package:
 - cmd: 
-Deploy:
-  Provider: Environment
-  Name: MyEnvironment2-WebDeploy
-  On:
-     Branch : master
+deploy:
+  provider: Environment
+  name: MyEnvironment2
+  on:
+     branch: master
