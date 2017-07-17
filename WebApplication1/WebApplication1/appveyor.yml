@@ -1,12 +1,11 @@
 version: 1.0.{build}
-nuget:
-  project_feed: true
 before_build:
 - cmd: 
 build:
   publish_wap: true
-  publish_nuget: true
   verbosity: minimal
+before_package:
+- cmd: 
 deploy:
 - provider: WebDeploy
   server: https://xptehran.scm.azurewebsites.net:443/msdeploy.axd
