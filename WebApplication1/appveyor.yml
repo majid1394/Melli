@@ -4,10 +4,8 @@ before_build:
 build:
   publish_wap: true
   verbosity: minimal
-before_package:
-- cmd: 
 deploy:
 - provider: Environment
   name: MyEnvironment2
   on:
-  branch: master
+    branch: master
