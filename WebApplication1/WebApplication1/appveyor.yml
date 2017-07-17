@@ -6,13 +6,8 @@ build:
   verbosity: minimal
 before_package:
 - cmd: 
-deploy:
-- provider: WebDeploy
-  server: https://xptehran.scm.azurewebsites.net:443/msdeploy.axd
-  website: XPTehran /CD4
-  username: $XPTehran
-  password:
-    secure: 5MCIbFEfeAe+i/Mu6BuE9OOo6e1Q2pWN7R5T+kglXB5RXiv9XzW40njqbZc2mtOvzKHyZgmc+yhTU+G2ieVrXg==
-  artifact: WebApplication1.zip
-  on:
-    branch: master 
+Deploy:
+  Provider: Environment
+  Name: MyEnvironment2
+  On:
+     Branch : master
