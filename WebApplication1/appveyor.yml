@@ -7,7 +7,7 @@ build:
 before_package:
 - cmd: 
 Deploy:
-  Provider: WebDeploy
-  Name: MyEnvironment2
+  Provider: Environment
+  Name: MyEnvironment2-WebDeploy
   On:
      Branch : master
