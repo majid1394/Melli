@@ -1,13 +1,16 @@
-version: 1.0.{build}
-before_build:
-- cmd: 
-build:
+--- 
+Deploy: 
+  Name: MyEnvironment2
+  Provider: Environment
+  true: 
+    Branch: master
+before_build: 
+  - 
+    cmd: ~
+before_package: 
+  - 
+    cmd: ~
+build: 
   publish_wap: true
   verbosity: minimal
-before_package:
-- cmd: 
-Deploy:
-  Provider: Environment
-  Name: MyEnvironment2
-  On:
-     Branch : master
+version: "1.0.{build}"
