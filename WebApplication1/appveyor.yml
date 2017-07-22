@@ -1,11 +1,10 @@
 version: 1.0.{build}
-before_build:
-- cmd: 
 build:
   publish_wap: true
   verbosity: minimal
+  
 deploy:
-- provider: Environment
-  name: MyEnvironment2
-  on:
-    branch: master
+  - provider: Environment
+    name: MyEnvironment2
+    on:
+      branch: master
